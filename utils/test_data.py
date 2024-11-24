@@ -1,5 +1,4 @@
 
-
 class TestData:
 
     VALID_EMAIL = "marius.mot79@gmail.com"
