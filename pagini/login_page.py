@@ -1,9 +1,9 @@
 from config.config import Config
-from pagini.base_page import BasePage
 
-class LoginPage(BasePage):
-    #def __init__(self, page: Page):
-    #     self.page = page
+
+class LoginPage():
+    def __init__(self, page):
+        self.page = page
         #super().__init__(page)
 
     LOG_IN_LINK = "[data-testid='header-sign-in']"
