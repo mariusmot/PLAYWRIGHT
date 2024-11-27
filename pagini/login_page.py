@@ -28,7 +28,9 @@ class LoginPage(BasePage):
         self.page.wait_for_selector(self.EMAIL_INPUT, state="attached").fill(username)
         self.page.wait_for_selector(self.PASSWORD_INPUT, state="attached").fill(password)
         self.page.wait_for_selector(self.LOGIN_BUTTON).click()
-        self.page.wait_for_load_state('networkidle')
+        self.page.wait_for_url(TestData.LOGGED_IN_URL)
+        #self.page.wait_for_load_state("networkidle")
+        #self.page.wait_for_selector(self.AVATAR_DROPDOWN)
 
     def logout(self):
         self.page.wait_for_selector(self.AVATAR_DROPDOWN, state="attached").click()
